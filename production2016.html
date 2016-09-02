@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>愛知県における各種Data</title>
+    <link href="css/bootstrap.min.css" href="ods.css" rel="stylesheet">
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1', {
+            'packages': ['corechart']
+        });
+        var resizable_chart;
+        var resizable_options;
+        var resizable_data;
+        google.setOnLoadCallback(function () {
+            resizable_data = google.visualization.arrayToDataTable([
+                ['地区', '人口/km²(万人)', '事故割合(台/件)'],
+                ['名古屋市', 229.6, 89.5],
+                ['横浜市', 372.6, 128.0],
+                ['大阪市', 269.2, 67.35],
+                ['札幌市', 195.4, 356.4],
+                ['福岡市', 153.9, 73.19],
+                ['神戸市', 153.8, 87.83],
+                ['京都市', 147.5, 92.66],
+                ['川崎市', 147.5, 127.0],
+                ['さいたま市', 126.4, 87.72],
+                ['広島市', 119.5, 94.84],
+                ]);
+
+            resizable_options = {
+                title: '各政令指定都市人口・事故割合(何台に１台事故を起こしているか)',
+                height: 500
+            };
+            resizable_chart = new google.visualization.BarChart(document.getElementById('gct_resizable_chart'));
+            resizable_chart.draw(resizable_data, resizable_options);
+        });
+    </script>
+
+
+</head>
+
+<body onresize="resizable_chart.draw(resizable_data, resizable_options)" style="margin :20px">
+    <header>
+        <h2>愛知県の車・その他の統計データ</h2>
+    </header>
+    <h4>前置き</h4>
+    <br>
+    <p>愛知県はトヨタ自動車の所在地であるためか、自動車の保有台数が日本一である。それと同時に、自動車事故の件数も日本一である。ここで気になるのは、本当に名古屋走りなどと呼ばれる運転マナーの悪さが原因なのだろうか？？車が多いのが原因なのではないか？？
+        <br>確かに名古屋の運転は悪い(個人の感想です)。しかし、他の都道府県の運転が本当にいいものなのだろうか。正直、大阪や京都の運転もなかなか悪い(あくまで個人の感想です)。そういった点から、統計データを参考に、事故の内容や原因の観点を含め、他の都市と比較しながら名古屋走りの実態を見ていきたいと考える。</p>
+
+    <div class="container" style="padding:20px 0">
+
+        <table class="table table-striped table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>地区</th>
+                    <th>人口(人)</th>
+                    <th>交通事故件数(件)</th>
+                    <th>自動車保有台数(台)</th>
+                    <th>保有率(台/人)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>名古屋市[<a href="https://www.pref.aichi.jp/police/koutsu/jiko/koutsu-s/toukei.html">Link</a>]</td>
+                    <td>2,296,014</td>
+                    <td>14,250</td>
+                    <td>1,275,567</td>
+                    <td>0.556</td>
+                </tr>
+                <tr>
+                    <td>横浜市[<a href="http://www.city.yokohama.lg.jp/doro/kotsujitensya/kotsu/toukei/">Link</a>]</td>
+                    <td>3,726,167</td>
+                    <td>10,397</td>
+                    <td>1,331,218</td>
+                    <td>0.357</td>
+                </tr>
+                <tr>
+                    <td>大阪市[<a href="http://www.city.osaka.lg.jp/shimin/page/0000334902.html">Link</a>]</td>
+                    <td>2,691,742</td>
+                    <td>12,769</td>
+                    <td>860,057</td>
+                    <td>0.320</td>
+                </tr>
+                <tr>
+                    <td>札幌市[<a href="http://www.city.sapporo.jp/kotsuanzen/jikojyoukyou.html">Link</a>]</td>
+                    <td>1,953,784</td>
+                    <td>2,844</td>
+                    <td>1,013,650</td>
+                    <td>0.519</td>
+                </tr>
+                <tr>
+                    <td>福岡市[<a href="">Link</a>]</td>
+                    <td>1,538,510</td>
+                    <td>11,810</td>
+                    <td>864,415</td>
+                    <td>0.562</td>
+                </tr>
+                <tr>
+                    <td>神戸市[<a href="http://www.city.kobe.lg.jp/safety/safety/toukei/27_zentai.html">Link</a>]</td>
+                    <td>1,537,860</td>
+                    <td>7,232</td>
+                    <td>635,193</td>
+                    <td>0.413</td>
+                </tr>
+                <tr>
+                    <td>京都市[<a href="http://www.city.kyoto.lg.jp/bunshi/page/0000188594.html">Link</a>]</td>
+                    <td>1,474,570</td>
+                    <td>6,330</td>
+                    <td>586,568</td>
+                    <td>0.398</td>
+                </tr>
+                <tr>
+                    <td>川崎市[<a href="http://www.city.kawasaki.jp/250/page/0000050513.html">Link</a>]</td>
+                    <td>1,475,300</td>
+                    <td>3,328</td>
+                    <td>422,950</td>
+                    <td>0.287</td>
+                </tr>
+                <tr>
+                    <td>さいたま市[<a href="https://www.police.pref.saitama.lg.jp/f0011/kotsu/kotutokei.html">Link</a>]</td>
+                    <td>1,264,253</td>
+                    <td>4,412</td>
+                    <td>387,026</td>
+                    <td>0.306</td>
+                </tr>
+                <tr>
+                    <td>広島市[<a href="https://www.police.pref.saitama.lg.jp/f0011/kotsu/kotutokei.html">Link</a>]</td>
+                    <td>1,194,507</td>
+                    <td>4,556</td>
+                    <td>432,130</td>
+                    <td>0.362</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>とりあえず上の表に政令指定都市９か所の各種データをまとめてみた。政令都市を比較対象に挙げた理由は、人口や中心部の発展具合がほかの市町村に比べて近いからである。そして、上記においては人口、自動車の保有台数などの基本データをまとめてある。"これはさほど重要ではない。"
+        <br>次にグラフを準備してある。これは人口と車に数に対する事故の割合を示している。つまり数が多いほど車の台数に比べて事故が少ないという事である。本当はもっと多くのデータを引用すべきだったのだろうが、今は時間がないので少し簡潔にデータをまとめておく。
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    <div id="gct_resizable_chart"></div>
+    
+    <p></p>
+
+</body>
+
+</html>
