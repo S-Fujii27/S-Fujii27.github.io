@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>愛知県における各種Data</title>
+    
+</head>
+
+    <div class="container" style="padding:20px 0">
+    <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>愛知県における各種Data</title>
+
+    
     <link href="css/bootstrap.min.css" href="ods.css" rel="stylesheet">
     <script src="https://www.google.com/jsapi" type="text/javascript"></script>
     <script type="text/javascript">
@@ -29,7 +43,6 @@
                 ['さいたま市', 126.4, 87.72],
                 ['広島市', 119.5, 94.84],
                 ]);
-
             resizable_options = {
                 title: '各政令指定都市人口・事故割合(何台に１台事故を起こしているか)',
                 height: 500
@@ -38,6 +51,7 @@
             resizable_chart.draw(resizable_data, resizable_options);
         });
     </script>
+    
 
 
 </head>
@@ -46,102 +60,83 @@
     <header>
         <h2>愛知県の車・その他の統計データ</h2>
     </header>
-    <h4>前置き</h4>
+    <h4>前置</h4>
     <br>
     <p>愛知県はトヨタ自動車の所在地であるためか、自動車の保有台数が日本一である。それと同時に、自動車事故の件数も日本一である。ここで気になるのは、本当に名古屋走りなどと呼ばれる運転マナーの悪さが原因なのだろうか？？車が多いのが原因なのではないか？？
         <br>確かに名古屋の運転は悪い(個人の感想です)。しかし、他の都道府県の運転が本当にいいものなのだろうか。正直、大阪や京都の運転もなかなか悪い(あくまで個人の感想です)。そういった点から、統計データを参考に、事故の内容や原因の観点を含め、他の都市と比較しながら名古屋走りの実態を見ていきたいと考える。</p>
 
     <div class="container" style="padding:20px 0">
 
-        <table class="table table-striped table-bordered table-condensed">
-            <thead>
-                <tr>
-                    <th>地区</th>
-                    <th>人口(人)</th>
-                    <th>交通事故件数(件)</th>
-                    <th>自動車保有台数(台)</th>
-                    <th>保有率(台/人)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>名古屋市[<a href="https://www.pref.aichi.jp/police/koutsu/jiko/koutsu-s/toukei.html">Link</a>]</td>
-                    <td>2,296,014</td>
-                    <td>14,250</td>
-                    <td>1,275,567</td>
-                    <td>0.556</td>
-                </tr>
-                <tr>
-                    <td>横浜市[<a href="http://www.city.yokohama.lg.jp/doro/kotsujitensya/kotsu/toukei/">Link</a>]</td>
-                    <td>3,726,167</td>
-                    <td>10,397</td>
-                    <td>1,331,218</td>
-                    <td>0.357</td>
-                </tr>
-                <tr>
-                    <td>大阪市[<a href="http://www.city.osaka.lg.jp/shimin/page/0000334902.html">Link</a>]</td>
-                    <td>2,691,742</td>
-                    <td>12,769</td>
-                    <td>860,057</td>
-                    <td>0.320</td>
-                </tr>
-                <tr>
-                    <td>札幌市[<a href="http://www.city.sapporo.jp/kotsuanzen/jikojyoukyou.html">Link</a>]</td>
-                    <td>1,953,784</td>
-                    <td>2,844</td>
-                    <td>1,013,650</td>
-                    <td>0.519</td>
-                </tr>
-                <tr>
-                    <td>福岡市[<a href="http://www.police.pref.fukuoka.jp/kotsu/kotsukikaku/toukei/trafficaccident.html">Link</a>]</td>
-                    <td>1,538,510</td>
-                    <td>11,810</td>
-                    <td>864,415</td>
-                    <td>0.562</td>
-                </tr>
-                <tr>
-                    <td>神戸市[<a href="http://www.city.kobe.lg.jp/safety/safety/toukei/27_zentai.html">Link</a>]</td>
-                    <td>1,537,860</td>
-                    <td>7,232</td>
-                    <td>635,193</td>
-                    <td>0.413</td>
-                </tr>
-                <tr>
-                    <td>京都市[<a href="http://www.city.kyoto.lg.jp/bunshi/page/0000188594.html">Link</a>]</td>
-                    <td>1,474,570</td>
-                    <td>6,330</td>
-                    <td>586,568</td>
-                    <td>0.398</td>
-                </tr>
-                <tr>
-                    <td>川崎市[<a href="http://www.city.kawasaki.jp/250/page/0000050513.html">Link</a>]</td>
-                    <td>1,475,300</td>
-                    <td>3,328</td>
-                    <td>422,950</td>
-                    <td>0.287</td>
-                </tr>
-                <tr>
-                    <td>さいたま市[<a href="https://www.police.pref.saitama.lg.jp/f0011/kotsu/kotutokei.html">Link</a>]</td>
-                    <td>1,264,253</td>
-                    <td>4,412</td>
-                    <td>387,026</td>
-                    <td>0.306</td>
-                </tr>
-                <tr>
-                    <td>広島市[<a href="https://www.police.pref.saitama.lg.jp/f0011/kotsu/kotutokei.html">Link</a>]</td>
-                    <td>1,194,507</td>
-                    <td>4,556</td>
-                    <td>432,130</td>
-                    <td>0.362</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="gct_resizable_chart"></div>       
+     
     </div>
     <div align="right"><a href="quotation.html">引用元</a></div>
     <br>
-    <p>とりあえず上の表に政令指定都市９か所の各種データをまとめてみた。政令都市を比較対象に挙げた理由は、人口や中心部の発展具合がほかの市町村に比べて近いからである。そして、上記においては人口、自動車の保有台数などの基本データをまとめてある。"これはさほど重要ではない。"
-        <br>次にグラフを準備してある。これは人口と車に数に対する事故の割合を示している。つまり数が多いほど車の台数に比べて事故が少ないという事である。本当はもっと多くのデータを引用すべきだったのだろうが、今は時間がないので少し簡潔にデータをまとめておく。
+    <p>とりあえず上の表に政令指定都市９か所の各種データをまとめてみた。政令都市を比較対象に挙げた理由は、人口や中心部の発展具合がほかの市町村に比べて近いからである。そして、上記において、人口と車に数に対する事故の割合を示している。つまり数が多いほど車の台数に比べて事故が少ないという事である。本当はもっと多くのデータを引用すべきだったのだろうが、今は時間がないので少し簡潔にデータをまとめておく。
     </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+        
+  <div id="gct_sample_pie" style="width:60%; height:200pt" ></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $("[data-toggle=popover]").popover({
+                    trigger: 'hover',
+                });
+            });
+        </script>
+        
+    <p></p>
+
+
+</body>
+
+</html>
+       
+        </table>
+    </div>
+    <div align="right">
+
+
+    
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+    var data = google.visualization.arrayToDataTable([
+        [   '事故原因',  '件数'],
+        [   '追突',  7897],
+        [   '出合い頭',   1550],
+        [   '右左折',   554],
+        [   '正面衝突',   50],
+        [   'その他',   1533]
+    ]);
+    
+    var options = {
+        title: '事故原因(車同士の事故のみ)',
+    };
+    
+    var chart = new google.visualization.PieChart(
+        document.getElementById('gct_sample_pie'));
+    chart.draw(data, options);
+    
+
+</script>
+
+ <div align="right">引用元：名古屋市・・・http://www.city.nagoya.jp/shiminkeizai/page/0000071986.html</div>
+ 
+ <p>圧倒的に追突事故が多い。経験からの面もあるが、自身の教習中に後続車両が煽ってくる場面に多く遭遇した。この場面で急停車すれば確実に事故を起こすだろうなーとか考えていた。てか多くの事故の原因これじゃね？とか思っています。</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -154,8 +149,6 @@
     </script>
 
     <div id="gct_resizable_chart"></div>
-    
-    <p></p>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
