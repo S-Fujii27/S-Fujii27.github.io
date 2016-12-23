@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>愛知県の事故に関して考えてみた。</title>
+
+
+    <link href="css/bootstrap.min.css" href="ods.css" rel="stylesheet">
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1', {
+            'packages': ['corechart']
+        });
+        var resizable_chart;
+        var resizable_options;
+        var resizable_data;
+    </script>
+
+
+
+</head>
+
+<body onresize="resizable_chart.draw(resizable_data, resizable_options)" style="margin :20px">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">愛知の事故について考えてみた。</a>
+            </div>
+            <div class="collapse navbar-collapse target">
+                <ul class="nav navbar-nav">
+                    <li><a href="thinking.html">疑問を持ってみた。</a>
+                    </li>
+                    <li><a href="comparison.html">他の都市と比べてみた。</a>
+                    </li>
+                    <li class="active"><a href="cause.html">原因を考えてみた。</a>
+                    </li>
+
+                    <li><a href="summary.html">まとめてみた。</a>
+                    </li>
+
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <p>先ほどは他の政令指定都市との比較を出した。というわけで今度は他の地域ではなく愛知県、ひいては名古屋市内(名古屋走りとか言うし)のデータに関して考えていきたい。
+        <br>そしてここでは事故原因について焦点を当てていきたいと思う。他県から来た人は名古屋の車の走り方に度々驚愕すると思う。時々まとめサイトにもあがっているのを見かける。そんな名古屋市でどのような事故がどのような割合で起こっているのか、データとしてまとめてみた。
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    <div id="gct_sample_pie" style="width:150%; height:300%"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    <p></p>
+
+
+</body>
+
+</html>
+
+</table>
+</div>
+<div align="right">
+
+
+
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        var data = google.visualization.arrayToDataTable([
+        ['事故原因', '件数'],
+        ['追突', 7897],
+        ['出合い頭', 1550],
+        ['右左折', 554],
+        ['正面衝突', 50],
+        ['その他', 1533]
+    ]);
+
+        var options = {
+            title: '事故原因(車同士の事故のみ)',
+        };
+
+        var chart = new google.visualization.PieChart(
+            document.getElementById('gct_sample_pie'));
+        chart.draw(data, options);
+    </script>
+
+    <div align="right">引用元：<a href="http://www.city.nagoya.jp/shiminkeizai/page/0000071986.html">名古屋市</a></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    <div id="gct_resizable_chart"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    </body>
+
+    </html>
