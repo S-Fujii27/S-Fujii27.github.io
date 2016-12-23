@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+    <html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>政令指定都市事故件数</title>
+
+
+        <link href="css/bootstrap.min.css" href="ods.css" rel="stylesheet">
+        <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+        <script type="text/javascript">
+            google.load('visualization', '1', {
+                'packages': ['corechart']
+            });
+            var resizable_chart;
+            var resizable_options;
+            var resizable_data;
+            google.setOnLoadCallback(function () {
+                resizable_data = google.visualization.arrayToDataTable([
+                ['地区', '人口/km²(万人)', '事故割合(台/件)'],
+                ['名古屋市', 229.6, 89.5],
+                ['横浜市', 372.6, 128.0],
+                ['大阪市', 269.2, 67.35],
+                ['札幌市', 195.4, 356.4],
+                ['福岡市', 153.9, 73.19],
+                ['神戸市', 153.8, 87.83],
+                ['京都市', 147.5, 92.66],
+                ['川崎市', 147.5, 127.0],
+                ['さいたま市', 126.4, 87.72],
+                ['広島市', 119.5, 94.84],
+                ]);
+                resizable_options = {
+                    title: '各政令指定都市人口・事故割合(何台に１台事故を起こしているか)',
+                    height: 500
+                };
+                resizable_chart = new google.visualization.BarChart(document.getElementById('gct_resizable_chart'));
+                resizable_chart.draw(resizable_data, resizable_options);
+            });
+        </script>
+
+
+
+    </head>
+
+    <body onresize="resizable_chart.draw(resizable_data, resizable_options)" style="margin :20px">
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">愛知の事故について考えてみた。</a>
+                </div>
+                <div class="collapse navbar-collapse target">
+                    <ul class="nav navbar-nav">
+                       <li><a href="think.html">疑問を持ってみた。</a>
+                        </li>
+                        <li class="active"><a href="comparison.html">他の都市と比べてみた。</a>
+                        </li>
+                        <li><a href="cause.html">原因を考えてみた。</a>
+                        </li>
+                            <li><a href="summary.html">まとめてみた。</a>
+                            </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+          
+        <div class="container" style="padding:20px 0">
+
+            <div id="gct_resizable_chart"></div>
+
+        </div>
+        <div align="right"><a href="quotation.html">引用元</a>
+        </div>
+        <br>
+        <p>とりあえず上の表に政令指定都市９か所の各種データをまとめてみた。政令都市を比較対象に挙げた理由は、人口や中心部の発展具合がほかの市町村に比べて近いからである。そして、上記において、人口と車に数に対する事故の割合を示している。つまり数が多いほど車の台数に比べて事故が少ないという事である。本当はもっと多くのデータを引用すべきだったのだろうが、今は時間がないので少し簡潔にデータをまとめておく。
+        </p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $("[data-toggle=popover]").popover({
+                    trigger: 'hover',
+                });
+            });
+        </script>
+
+        <div id="gct_sample_pie" style="width:60%; height:200pt"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $("[data-toggle=popover]").popover({
+                    trigger: 'hover',
+                });
+            });
+        </script>
+
+        <p></p>
+
+
+    </body>
+
+    </html>
+
+    </table>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    <div id="gct_resizable_chart"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+    </body>
+
+</html>
