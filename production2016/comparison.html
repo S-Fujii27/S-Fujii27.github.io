@@ -19,20 +19,20 @@
             var resizable_data;
             google.setOnLoadCallback(function () {
                 resizable_data = google.visualization.arrayToDataTable([
-                ['地区', '人口/km²(万人)', '事故割合(台/件)'],
-                ['名古屋市', 229.6, 89.5],
-                ['横浜市', 372.6, 128.0],
-                ['大阪市', 269.2, 67.35],
-                ['札幌市', 195.4, 356.4],
-                ['福岡市', 153.9, 73.19],
-                ['神戸市', 153.8, 87.83],
-                ['京都市', 147.5, 92.66],
-                ['川崎市', 147.5, 127.0],
-                ['さいたま市', 126.4, 87.72],
-                ['広島市', 119.5, 94.84],
+                ['地区', '人口(万人)', '1万人あたり事故件数(台/万人)'],
+                ['名古屋', 230.4, 73.8],
+                ['横浜', 373.1, 43.5],
+                ['大阪', 270.2, 57.6],
+                ['福岡', 155.3, 86.8],
+                ['京都', 147.4, 63.1],
+                ['神戸', 153.5, 60.3],
+                ['浜松', 79.7, 112.5],
+                ['北九州', 95.6, 91.0],
+                ['札幌', 195.8, 43.5],
+                ['岡山', 72.1, 108.4],
                 ]);
                 resizable_options = {
-                    title: '各政令指定都市人口・事故割合(何台に１台事故を起こしているか)',
+                    title: '事故多数都市人口・事故割合(1万人あたり何人事故を起こしているか)',
                     height: 500
                 };
                 resizable_chart = new google.visualization.BarChart(document.getElementById('gct_resizable_chart'));
@@ -57,7 +57,7 @@
                 </div>
                 <div class="collapse navbar-collapse target">
                     <ul class="nav navbar-nav">
-                       <li><a href="thinking.html">疑問を持ってみた。</a>
+                       <li><a href="think.html">疑問を持ってみた。</a>
                         </li>
                         <li class="active"><a href="comparison.html">他の都市と比べてみた。</a>
                         </li>
@@ -75,10 +75,11 @@
             <div id="gct_resizable_chart"></div>
 
         </div>
-        <div align="right"><a href="quotation.html">引用元</a>
+        <div align="right">引用元:人口密度→<a href="http://uub.jp/rnk/cktv_j.html">こちら</a>
         </div>
         <br>
-        <p>とりあえず上の表に政令指定都市９か所の各種データをまとめてみた。政令都市を比較対象に挙げた理由は、人口や中心部の発展具合がほかの市町村に比べて近いからである。そして、上記において、人口と車に数に対する事故の割合を示している。つまり数が多いほど車の台数に比べて事故が少ないという事である。本当はもっと多くのデータを引用すべきだったのだろうが、今は時間がないので少し簡潔にデータをまとめておく。
+        <p>とりあえず<a href="thinking.html">前ページ</a>において述べた「事故の多い都市ワースト10」のすべての都市における人口、また1万人あたりの事故件数をまとめてみた。このデータにおいては、人口の多い地域は運転できない子供が多いことや、栄えている地域が広いことなどから、人口の多さと事故割合は反比例するのではないかと考えていた。
+        <br>グラフによると、多少の誤差があることはあるものの、比較的予想通りの結果に落ち着いたのではないかと考える(札幌は例外)。人口との比較においては名古屋における運転の悪さは見られなかったが、前ページのデータを考慮すると、事故件数においては上位4都市が多かったが、その中で福岡がほかの3都市と比べ人口が少ない。どちらかというと名古屋より福岡などの方が事故に関して目立っていたように感じられる。
         </p>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -91,51 +92,7 @@
             });
         </script>
 
-        <div id="gct_sample_pie" style="width:60%; height:200pt"></div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script>
-            $(function () {
-                $("[data-toggle=popover]").popover({
-                    trigger: 'hover',
-                });
-            });
-        </script>
-
-        <p></p>
-
 
     </body>
 
     </html>
-
-    </table>
-</div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            $("[data-toggle=popover]").popover({
-                trigger: 'hover',
-            });
-        });
-    </script>
-
-    <div id="gct_resizable_chart"></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            $("[data-toggle=popover]").popover({
-                trigger: 'hover',
-            });
-        });
-    </script>
-
-    </body>
-
-</html>
