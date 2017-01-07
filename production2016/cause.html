@@ -19,8 +19,6 @@
         var resizable_data;
     </script>
 
-
-
 </head>
 
 <body onresize="resizable_chart.draw(resizable_data, resizable_options)" style="margin :20px">
@@ -53,6 +51,7 @@
     <br>
     <p>先ほどは他の政令指定都市との比較を出した。というわけで今度は他の地域ではなく愛知県、ひいては名古屋市内(名古屋走りとか言うし)のデータに関して考えていきたい。
         <br>そしてここでは事故原因について焦点を当てていきたいと思う。他県から来た人は名古屋の車の走り方に度々驚愕すると思う。時々まとめサイトにもあがっているのを見かける。そんな名古屋市でどのような事故がどのような割合で起こっているのか、データとしてまとめてみた。
+        <br>また、明確にほかの地域との違いを示すために、今回は横浜市の事故発生状況を同様にデータを出してみた。明確な違いを見ていきたい。
     </p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -65,61 +64,55 @@
         });
     </script>
 
-    <div id="gct_sample_pie" style="width:100%; height:200px"></div>
+    <div id="gct_nagoya_pie" style="width:60%; height:200px"></div>
+    
+    <div id="gct_yokohama_pie" style="width:60%; height:200px"></div>
 
 
 </body>
-
-</div>
-<div align="right">
-
-
-
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
         var data = google.visualization.arrayToDataTable([
         ['事故原因', '件数'],
-        ['追突', 7897],
-        ['出合い頭', 1550],
+        ['追突', 7884],
+        ['出合い頭', 380],
         ['右左折', 554],
-        ['正面衝突', 50],
-        ['その他', 1533]
+        ['正面衝突', 57],
+        ['その他', 1513]
     ]);
 
         var options = {
-            title: '事故原因(車同士の事故のみ)',
+            title: '事故原因＠名古屋市(車同士の事故のみ,H27)',
         };
 
         var chart = new google.visualization.PieChart(
-            document.getElementById('gct_sample_pie'));
+            document.getElementById('gct_nagoya_pie'));
         chart.draw(data, options);
     </script>
+     <script type="text/javascript">
+        var data = google.visualization.arrayToDataTable([
+        ['事故原因', '件数'],
+        ['追突', 2586],
+        ['出合い頭', 1101],
+        ['右左折', 2202],
+        ['正面衝突', 224],
+        ['その他', 1937]
+    ]);
 
-    <div align="right">引用元：<a href="http://www.city.nagoya.jp/shiminkeizai/page/0000071986.html">名古屋市</a></div>
+        var options = {
+            title: '事故原因＠横浜市(車同士の事故のみ,H27)',
+        };
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            $("[data-toggle=popover]").popover({
-                trigger: 'hover',
-            });
-        });
+        var chart = new google.visualization.PieChart(
+            document.getElementById('gct_yokohama_pie'));
+        chart.draw(data, options);
     </script>
-
-    <div id="gct_resizable_chart"></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            $("[data-toggle=popover]").popover({
-                trigger: 'hover',
-            });
-        });
-    </script>
+<div align="right">引用元:<a href="http://www.city.nagoya.jp/shiminkeizai/page/0000071986.html">名古屋市</a>,<a href="http://www.city.yokohama.lg.jp/doro/kotsujitensya/kotsu/toukei/">横浜市道路局</a>
+    </div>
+    <br>
+    <p>正直、ここまで差が出るとは思わなかったが、圧倒的に追突事故が多い。圧倒的に。事故件数としては名古屋市が10388件、横浜市が8050件である。一応、日本の政令指定都市の中で比較的近い2つの都市を比較しているが、明らかに差が出ている。しかし、追突以外の事故が横浜の方が多い。いかに名古屋市における追突事故が多いのかがわかる。強引な割り込みやゆっくりした車への煽りなど、原因として考えられるものは山ほどあるが、追突事故を減らすことが出来れば、名古屋市、ひいては愛知県の交通事故件数ワーストから間違いなく抜けられるだろう。
+    </p>
 
     </body>
 
