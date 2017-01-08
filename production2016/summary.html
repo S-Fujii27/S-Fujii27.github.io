@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>まとめてみた。</title>
+    
+        <link href="css/bootstrap.min.css" href="ods.css" rel="stylesheet">
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
+</head>
+
+<body onresize="resizable_chart.draw(resizable_data, resizable_options)" style="margin :20px">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">愛知の事故について考えてみた。</a>
+            </div>
+            <div class="collapse navbar-collapse target">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="think.html">疑問を持ってみた。</a>
+                    </li>
+                    <li><a href="comparison.html">他の都市と比べてみた。</a>
+                    </li>
+                    <li><a href="cause.html">原因を考えてみた。</a>
+                    </li>
+                    <li><a href="summary.html">まとめてみた。</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="padding:20px 0">
+
+    </div>
+
+    <br>
+    <h3>まとめ</h3>
+
+    <p>今回は改めて「名古屋走り」というものに焦点を当てて様々なデータを引用して考えた。愛知県および名古屋市が日本一事故が多い地域という点で、いくつかのデータをまとめたうえで最終的な原因、解決策などを導き出すことが出来たのではないかと思う。交通事故という非常にありふれた統計ではあったが、データの使い方によっては本当に様々な視点から事故を減らす為の解決策が見えてくるのではないか。また、今回はあくまで自動車のみで考えていたが、統計を調査していく中で、自動車だけでなく、二輪車(原付)や歩行者を含む事故も考えるとさらに隠れた原因や解決策が見えてくるのではないかと思う。</p>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                trigger: 'hover',
+            });
+        });
+    </script>
+
+</body>
+
+</html>
